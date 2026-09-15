@@ -161,7 +161,8 @@ svg { display: block; }
 .section--alt { background: var(--paper-2); }
 .section--rule { border-top: 1px solid var(--rule-soft); }
 .prose { max-width: var(--measure); }
-.lede { font-size: var(--step-1); line-height: 1.5; color: var(--ink-2); }
+.lede { font-size: var(--step-1); line-height: 1.5; color: var(--ink-2); text-wrap: pretty; }
+p { text-wrap: pretty; }   /* no orphaned last words */
 
 /* Eyebrow: mono index + label. The "practice" documentary tic. */
 .eyebrow {
