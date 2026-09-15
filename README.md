@@ -54,6 +54,10 @@ The four-step timeline in 03 is CSS on the step cards, not a separate diagram �
 
 Diagrams render their *finished* state first and animate from it, so a stalled observer or a JS failure never leaves a blank. Same for `.rv` reveals: visible by default, hidden only once `html.js` is set.
 
+## Screenshots
+
+`screenshots/` — `desktop-*` (1280px), `mobile-*` (390px), `variant-*` (the swap-ins). A snapshot for review, not a test fixture; they go stale the moment the page changes. Regenerate by running the site and capturing, or just open it.
+
 ## Variants
 
 Swap without touching code — add to the URL, or press **V** for a live switcher.
