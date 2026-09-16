@@ -15,7 +15,13 @@ cd site && python3 -m http.server 8000   # → localhost:8000
 
 ## Deploy
 
-Drop the folder on any static host — Cloudflare Pages, Netlify, GitHub Pages. No build command, no output dir. Point `theautomationpractice.com` at it.
+GitHub Pages from the public repo `nazzacode/theautomationpractice.com` (the main repo is private, so `site/` is split out). DNS A/CNAME → GitHub, managed by `scripts/porkbun_dns.py`.
+
+```bash
+scripts/deploy_site.sh   # from repo root: splits site/ and pushes; Actions deploys in ~30s
+```
+
+`.nojekyll`, `CNAME` and `.github/workflows/pages.yml` live in `site/` so the split carries them.
 
 ## Files
 
