@@ -3,21 +3,81 @@
   'use strict';
 
   /* ══ CONFIG ═════════════════════════════════════════════════════════
-     When a scheduler exists (Cal.com / Calendly / SavvyCal), put the URL
-     here. Every "Book a call" button on the page re-points at it, opening
-     in a new tab. Leave as null and they fall through to the phone number.
+     Booking = Google Calendar appointment schedule (Workspace, nathan@).
+       BOOKING_URL    share link  — opens the booking page in a new tab
+       BOOKING_EMBED  embed link  — same schedule, iframe-able (?gv=true)
+       BOOKING_MODE   how "Book a call" behaves (override with ?book=):
+         link    every button → BOOKING_URL, new tab
+         inline  calendar iframe sits in the Book section; buttons scroll to it
+         modal   every button opens the calendar in our own popup
+         google  Google's own blue button + popup, in the Book section
+     Set BOOKING_URL to null and every button falls through to the phone.
      ═══════════════════════════════════════════════════════════════════ */
-  var BOOKING_URL = null;   // e.g. 'https://cal.com/nathansharp/intro'
+  var BOOKING_URL = 'https://calendar.app.google/V2VrKdtyti7WyJRn7';
+  var BOOKING_EMBED = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1RnKP69rlpD731L420BEoJMlQMSe63iW0t0JeakP47yfuZL7LROFERmTWh3ROwSjXeFVeR4WsX?gv=true';
+  var BOOKING_MODE = 'modal';
 
   var d = document, root = d.documentElement;
+  var q = new URLSearchParams(location.search);
 
-  /* ── Booking links ─────────────────────────────────────────────────── */
-  if (BOOKING_URL) {
-    [].forEach.call(d.querySelectorAll('[data-cta]'), function (a) {
-      a.href = BOOKING_URL;
-      a.target = '_blank';
-      a.rel = 'noopener';
-    });
+  /* ── Booking ───────────────────────────────────────────────────────── */
+  var BOOK_MODES = ['link', 'inline', 'modal', 'google'];
+  var bookMode = BOOK_MODES.indexOf(q.get('book')) > -1 ? q.get('book') : BOOKING_MODE;
+  var ctas = [].slice.call(d.querySelectorAll('[data-cta]'));
+  var bookRow = d.querySelector('.book .cta-row');
+
+  function ctaLinkOut() {
+    ctas.forEach(function (a) { a.href = BOOKING_URL; a.target = '_blank'; a.rel = 'noopener'; });
+  }
+  function bookIframe(title) {
+    var f = d.createElement('iframe');
+    f.title = title; f.setAttribute('loading', 'lazy'); f.src = BOOKING_EMBED;
+    return f;
+  }
+
+  if (!BOOKING_URL) { /* phone fallthrough — nothing to do */ }
+  else if (bookMode === 'link') ctaLinkOut();
+  else if (bookMode === 'inline') {
+    var emb = d.createElement('div');
+    emb.className = 'book__embed';
+    emb.appendChild(bookIframe('Book a call'));
+    bookRow.parentNode.insertBefore(emb, bookRow);
+    bookRow.hidden = true;
+  }
+  else if (bookMode === 'modal') {
+    var dlg = d.createElement('dialog');
+    dlg.className = 'bookdlg';
+    dlg.innerHTML = '<button class="cls" aria-label="Close">×</button>';
+    d.body.appendChild(dlg);
+    var openDlg = function (e) {
+      if (e) e.preventDefault();
+      if (!dlg.querySelector('iframe')) dlg.appendChild(bookIframe('Book a call'));
+      dlg.showModal();
+    };
+    ctas.forEach(function (a) { a.addEventListener('click', openDlg); });
+    dlg.querySelector('.cls').addEventListener('click', function () { dlg.close(); });
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+    if (q.get('open') === '1') openDlg();
+  }
+  else if (bookMode === 'google') {
+    var slot = d.createElement('span');
+    bookRow.querySelector('[data-cta-primary]').hidden = true;
+    bookRow.appendChild(slot);
+    var css = d.createElement('link');
+    css.rel = 'stylesheet'; css.href = 'https://calendar.google.com/calendar/scheduling-button-script.css';
+    d.head.appendChild(css);
+    var js = d.createElement('script');
+    js.src = 'https://calendar.google.com/calendar/scheduling-button-script.js'; js.async = true;
+    js.onload = function () {
+      window.calendar.schedulingButton.load({
+        url: BOOKING_EMBED,
+        color: getComputedStyle(root).getPropertyValue('--accent').trim() || '#1B4D3E',
+        label: 'Book a call',
+        target: slot
+      });
+      if (q.get('open') === '1') setTimeout(function () { var b = slot.parentNode.querySelector('.qxCTlb'); if (b) b.click(); }, 300);
+    };
+    d.head.appendChild(js);
   }
 
   /* ── Year ──────────────────────────────────────────────────────────── */
@@ -79,19 +139,22 @@
 
   /* ── Variants ──────────────────────────────────────────────────────────
      Layout and palette alternatives Nathan can swap without touching code.
-       ?hero=a|b|c       hero layout
+       ?hero=a|b|c|d     hero layout (d = the closing "Let's chat" block on top)
        ?palette=forest|ink|slate
        ?theme=light|dark|system
+       ?book=link|inline|modal|google   (reloads — see CONFIG)
+       ?logos=0|1        tools strip under the hero
+       ?photos=0|1       section photos
      To make a variant the permanent default, edit the attributes in
-     index.html: <html data-palette="…"> and <body data-hero="…">.
+     index.html: <html data-palette="…"> and <body data-hero="…" data-logos="…" data-photos="…">.
      Press V (or ?panel=1) for the live switcher.
      ────────────────────────────────────────────────────────────────────── */
-  var q = new URLSearchParams(location.search);
-  var HEROES = ['a', 'b', 'c'], PALETTES = ['forest', 'ink', 'slate'];
+  var HEROES = ['a', 'b', 'c', 'd'], PALETTES = ['forest', 'ink', 'slate'], TOGGLES = ['logos', 'photos'];
 
   if (HEROES.indexOf(q.get('hero')) > -1) d.body.dataset.hero = q.get('hero');
   if (PALETTES.indexOf(q.get('palette')) > -1) root.setAttribute('data-palette', q.get('palette'));
   if (THEMES.indexOf(q.get('theme')) > -1) setTheme(q.get('theme'));
+  TOGGLES.forEach(function (k) { if (q.get(k) === '0' || q.get(k) === '1') d.body.dataset[k] = q.get(k); });
 
   function setHero(v) {
     d.body.dataset.hero = v;
@@ -99,6 +162,7 @@
     syncPanel();
   }
   function setPalette(v) { root.setAttribute('data-palette', v); syncPanel(); }
+  function setToggle(k, v) { d.body.dataset[k] = v; syncPanel(); }
 
   var panel = null;
   function syncPanel() {
@@ -107,6 +171,8 @@
       var k = b.dataset.k, v = b.dataset.v, cur;
       if (k === 'hero') cur = d.body.dataset.hero;
       else if (k === 'palette') cur = root.getAttribute('data-palette');
+      else if (k === 'book') cur = bookMode;
+      else if (TOGGLES.indexOf(k) > -1) cur = d.body.dataset[k] || '1';
       else cur = root.getAttribute('data-theme') || 'system';
       b.setAttribute('aria-pressed', String(cur === v));
     });
@@ -118,9 +184,12 @@
     panel.innerHTML =
       '<button class="cls" aria-label="Close">×</button>' +
       '<h4>Variants</h4>' +
-      row('Hero layout', 'hero', [['a', 'Split'], ['b', 'Centred'], ['c', 'Editorial']]) +
+      row('Hero layout', 'hero', [['a', 'Split'], ['b', 'Centred'], ['c', 'Editorial'], ['d', 'Chat']]) +
       row('Palette', 'palette', [['forest', 'Forest'], ['ink', 'Ink'], ['slate', 'Slate']]) +
       row('Theme', 'theme', [['system', 'Auto'], ['light', 'Light'], ['dark', 'Dark']]) +
+      row('Booking', 'book', [['link', 'Link'], ['inline', 'Inline'], ['modal', 'Popup'], ['google', 'Google']]) +
+      row('Tools strip', 'logos', [['1', 'On'], ['0', 'Off']]) +
+      row('Photos', 'photos', [['1', 'On'], ['0', 'Off']]) +
       '<p class="hint">Press <b>V</b> to hide. Shareable: add <b>?hero=b&amp;palette=slate</b> to the URL.</p>';
 
     function row(label, k, opts) {
@@ -137,6 +206,8 @@
       var k = b.dataset.k, v = b.dataset.v;
       if (k === 'hero') setHero(v);
       else if (k === 'palette') setPalette(v);
+      else if (k === 'book') { q.set('book', v); q.set('panel', '1'); location.search = q.toString(); }
+      else if (TOGGLES.indexOf(k) > -1) setToggle(k, v);
       else setTheme(v);
     });
     d.body.appendChild(panel);

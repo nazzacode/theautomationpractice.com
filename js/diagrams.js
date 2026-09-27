@@ -269,6 +269,24 @@
     host.appendChild(s);
 
     var stop = null, state = 'before';
+    // Plays itself: by hand (7s) → pause → automated → hold → back round.
+    // A click on the tabs takes over and stops the loop.
+    var visible = false, auto = !reduced, timer = null;
+    function stopAll() { if (stop) { stop(); stop = null; } if (timer) { clearTimeout(timer); timer = null; } }
+    function syncTabs() {
+      var b = document.getElementById('tab-before'), a = document.getElementById('tab-after');
+      if (b) b.setAttribute('aria-selected', String(state === 'before'));
+      if (a) a.setAttribute('aria-selected', String(state === 'after'));
+    }
+    function next() {
+      if (!auto || !visible || timer) return;
+      timer = setTimeout(function () {
+        timer = null;
+        state = state === 'before' ? 'after' : 'before';
+        syncTabs();
+        render(true);
+      }, state === 'before' ? 1200 : 4500);
+    }
 
     function clear() {
       if (stop) { stop(); stop = null; }
@@ -280,6 +298,7 @@
       cursor.setAttribute('opacity', 0);
       nBig.textContent = '6,000 of 6,000';
       nCap.textContent = 'Then it starts going out of date again.';
+      next();
     }
     function runBefore(animate) {
       clear();
@@ -308,6 +327,7 @@
       });
       nBig.textContent = '11 changed';
       nCap.textContent = 'Everything else confirmed unchanged. Nobody opened a browser.';
+      next();
     }
     function runAfter(animate) {
       clear();
@@ -334,11 +354,11 @@
     render(false);            // finished state up front
     var ran = false;
     return {
-      start: function () { if (ran) return; ran = true; render(!reduced); },
+      start: function () { visible = true; ran = true; render(!reduced); },
       settle: function () { if (ran) return; ran = true; render(false); },
-      pause: function () { if (stop) { stop(); stop = null; } },
-      destroy: function () { if (stop) stop(); },
-      setState: function (v) { state = v; ran = true; render(!reduced); }
+      pause: function () { visible = false; stopAll(); },
+      destroy: function () { stopAll(); },
+      setState: function (v) { auto = false; stopAll(); state = v; ran = true; syncTabs(); render(!reduced); }
     };
   }
 

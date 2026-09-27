@@ -1,124 +1,136 @@
 <!doctype html>
-<html lang="en-GB" data-palette="forest">
+<html lang="en-GB" data-palette="slate">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>The Automation Practice — Get your firm ready for AI</title>
-<meta name="description" content="We spend half a day with your team: set up the right tools, train your people, and build one automation that gives real hours back. For London firms new to AI.">
-<meta name="theme-color" content="#FBFAF7" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0F1312" media="(prefers-color-scheme: dark)">
+<title>The Automation Practice | Automation, strategy &amp; education</title>
+<meta name="description" content="Tell us where the time goes and we'll tell you what to automate first. AI automation, strategy and training for small firms.">
 <link rel="canonical" href="https://theautomationpractice.com/">
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="The Automation Practice — Get your firm ready for AI">
-<meta property="og:description" content="Half a day with your team. The right tools set up, your people trained, one real automation running, and a written plan.">
-<meta property="og:url" content="https://theautomationpractice.com/">
-<meta property="og:locale" content="en_GB">
-<meta name="twitter:card" content="summary_large_image">
-
+<link rel="stylesheet" href="css/site.css?v=1790515982">
+<link rel="stylesheet" href="css/lab.css?v=1790515982">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preload" href="fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/site.css">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-
-<!-- Marks the document as JS-capable before first paint. Without it the page
-     still renders in full — reveal animations simply don't apply. -->
 <script>document.documentElement.classList.add('js');</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "The Automation Practice",
-  "description": "AI adoption for London firms: training, automation and data infrastructure, starting with a half-day on-site audit.",
-  "url": "https://theautomationpractice.com/",
-  "telephone": "+447938890049",
-  "email": "nathan@theautomationpractice.com",
-  "areaServed": { "@type": "City", "name": "London" },
-  "founder": { "@type": "Person", "name": "Nathan Sharp" },
-  "knowsAbout": ["AI adoption", "Workflow automation", "AI training", "Data infrastructure"]
-}
-</script>
 </head>
 <body data-hero="a">
-<a class="skip" href="#main">Skip to content</a>
-
-<!-- ══ Header ══════════════════════════════════════════════════════════ -->
+<main id="main">
 <header class="hdr" id="hdr">
   <div class="wrap hdr__in">
-    <a class="brand" href="#top" aria-label="The Automation Practice — home">
-      <svg class="mark" width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
-        <rect x="1" y="1" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.4"/>
-        <path d="M6 14.2 9.4 7.8l3.2 6.4M7.6 12.4h3.6M14.4 7.8v6.4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      <span>The Automation <span class="thin">Practice</span></span>
-    </a>
+    <a class="brand" href="index.html" aria-label="The Automation Practice, home"><svg class="logo" aria-hidden="true"><use href="#tap-logo"/></svg></a>
     <nav class="nav" aria-label="Primary">
-      <a href="#what">What we do</a>
-      <a href="#how">How it works</a>
-      <a href="#results">Results</a>
-      <a href="#who">Who it's for</a>
-      <a href="#safety">Your data</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
     </nav>
-    <a class="btn btn--sm" data-cta href="#book">Book a call</a>
+    <button id="themeBtn" class="theme" aria-label="Switch between light and dark">
+      <svg class="ico-moon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.5 9.6A6 6 0 0 1 6.4 2.5a6 6 0 1 0 7.1 7.1z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+      <svg class="ico-sun" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.4"/><path d="M8 1.5v1.8M8 12.7v1.8M1.5 8h1.8M12.7 8h1.8M3.4 3.4l1.3 1.3M11.3 11.3l1.3 1.3M3.4 12.6l1.3-1.3M11.3 4.7l1.3-1.3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+    </button>
+    <a class="btn btn--sm" data-cta href="#chat">Book a strategy call</a>
   </div>
 </header>
 
-<main id="main">
-<div id="top"></div>
-
-<!-- ══ Hero ════════════════════════════════════════════════════════════ -->
-<section class="hero">
+<section class="hero" id="top">
   <div class="wrap hero__in">
     <div class="hero__copy">
-      <p class="hero__eyebrow"><span class="dot"></span> London · AI for firms new to it</p>
-      <h1>Get your firm <span class="u">ready for AI</span>.</h1>
-      <p class="hero__sub">Half a day with your team. We set up the right tools, train your people, and build one automation that gives real hours back — then leave you a written plan.</p>
+      <!-- Eyebrow: Coding Sprint (picks). H1: Arkham (picks). Sub: Nathan, 2026-09-18 -->
+      <p class="hero__eyebrow"><span class="dot"></span> We simplify AI</p>
+      <h1>Automation, strategy &amp; education</h1>
+      <p class="hero__sub">Let's chat about your tools. Tell us where the time goes, and we'll tell you what to automate first.</p>
       <div class="cta-row">
-        <a class="btn" data-cta href="#book">Book a call <span class="arr" aria-hidden="true">→</span></a>
-        <a class="tel" href="tel:+447938890049">+44 7938 890049</a>
-      </div>
-      <p class="hero__note">
-        <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 8.4 6.2 12l7.3-8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        The first conversation is free advice from people who do this every day.
-      </p>
-    </div>
-
-    <!-- Variant C only: supporting column -->
-    <div class="hero__aside">
-      <p class="hero__sub">A huge amount of the everyday work your team does by hand can be done faster, or automated completely. Lower costs, fewer mistakes, more time to win new business.</p>
-      <div class="cta-row">
-        <a class="btn" data-cta href="#book">Book a call <span class="arr" aria-hidden="true">→</span></a>
-        <a class="tel" href="tel:+447938890049">+44 7938 890049</a>
+        <a class="btn" data-cta href="#chat">Book a free strategy call <span class="arr" aria-hidden="true">→</span></a>
       </div>
     </div>
+    <div class="hero__art orb"><canvas id="orb" aria-hidden="true"></canvas></div>
+  </div>
+</section>
 
-    <div class="hero__art">
-      <div id="dg-flow" role="img" aria-label="Diagram: email, records and documents flow into an AI setup and come out as finished work."></div>
+<section class="section section--alt" id="what">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">What we do</p>
+      <!-- h2: VAYRO (picks) -->
+      <h2>AI becomes part of how you work.</h2>
+      <p class="lede">A short call, then half a day in your office. You leave with the tools set up, the team trained, one automation running and a written plan.</p>
+    </div>
+    <div class="steps rv">
+      <div class="step step--rail"><p class="step__n">01</p><h3>Call</h3><p>Twenty minutes. We find the job that eats the most time.</p><p class="step__meta">Free · 20 minutes</p></div>
+      <div class="step step--rail"><p class="step__n">02</p><h3>Audit</h3><p>Half a day on site. Tools set up, team trained, one automation live before we leave.</p><p class="step__meta">On site · half a day</p></div>
+      <div class="step step--rail"><p class="step__n">03</p><h3>Report &amp; plan</h3><p>Written findings and what to do next. Yours to keep.</p><p class="step__meta">Yours to keep</p></div>
+      <div class="step step--rail"><p class="step__n">04</p><h3>More</h3><p>We keep building, or you run with it.</p><p class="step__meta">Optional</p></div>
     </div>
   </div>
 </section>
 
-<!-- ══ Credibility strip ═══════════════════════════════════════════════ -->
-<div class="strip">
-  <div class="wrap strip__in">
-    <span class="strip__lbl">The shape of it</span>
-    <span><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 8.4 6.2 12l7.3-8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg> Half a day on-site</span>
-    <span><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 8.4 6.2 12l7.3-8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg> A real automation running before we leave</span>
-    <span><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 8.4 6.2 12l7.3-8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg> A written plan you keep</span>
-    <span><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 8.4 6.2 12l7.3-8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg> No jargon</span>
+<section class="section tools-row" id="tools" aria-label="Tools we work with">
+  <div class="wrap"><p class="tools__lbl">Tools we work with</p></div>
+  <!-- generated by img/make-tools.py — edit TOOLS there, not here -->
+  <div class="marquee">
+    <ul class="marquee__track" style="--n:26">
+      <li class="lg lg--txt"><i class="lg__mark" style="-webkit-mask-image:url(img/logos/norm/outlook-mark.svg);mask-image:url(img/logos/norm/outlook-mark.svg);--ar:1.140"></i>Outlook</li>
+      <li class="lg lg--txt"><i class="lg__mark" style="-webkit-mask-image:url(img/logos/norm/gmail-mark.svg);mask-image:url(img/logos/norm/gmail-mark.svg);--ar:1.324"></i>Gmail</li>
+      <li class="lg lg--txt"><i class="lg__mark" style="-webkit-mask-image:url(img/logos/norm/excel-mark.svg);mask-image:url(img/logos/norm/excel-mark.svg);--ar:1.140"></i>Excel</li>
+      <li class="lg lg--txt"><i class="lg__mark" style="-webkit-mask-image:url(img/logos/norm/googlesheets-mark.svg);mask-image:url(img/logos/norm/googlesheets-mark.svg);--ar:0.733"></i>Google Sheets</li>
+      <li class="lg lg--txt"><i class="lg__mark" style="-webkit-mask-image:url(img/logos/norm/word-mark.svg);mask-image:url(img/logos/norm/word-mark.svg);--ar:1.140"></i>Word</li>
+      <li class="lg lg--txt"><i class="lg__mark" style="-webkit-mask-image:url(img/logos/norm/googledocs-mark.svg);mask-image:url(img/logos/norm/googledocs-mark.svg);--ar:0.733"></i>Google Docs</li>
+      <li class="lg lg--txt"><i class="lg__mark" style="-webkit-mask-image:url(img/logos/norm/teams-mark.svg);mask-image:url(img/logos/norm/teams-mark.svg);--ar:1.077"></i>Teams</li>
+      <li class="lg lg--txt"><i class="lg__mark" style="-webkit-mask-image:url(img/logos/norm/googlemeet-mark.svg);mask-image:url(img/logos/norm/googlemeet-mark.svg);--ar:1.209"></i>Google Meet</li>
+      <li class="lg lg--txt"><i class="lg__mark" style="-webkit-mask-image:url(img/logos/norm/onedrive-mark.svg);mask-image:url(img/logos/norm/onedrive-mark.svg);--ar:1.544"></i>OneDrive</li>
+      <li class="lg lg--txt"><i class="lg__mark" style="-webkit-mask-image:url(img/logos/norm/googledrive-mark.svg);mask-image:url(img/logos/norm/googledrive-mark.svg);--ar:1.138"></i>Google Drive</li>
+      <li class="lg" role="img" aria-label="WhatsApp" style="-webkit-mask-image:url(img/logos/norm/whatsapp-wordmark.svg);mask-image:url(img/logos/norm/whatsapp-wordmark.svg);--ar:4.037;--lh:27px"></li>
+      <li class="lg" role="img" aria-label="Zoom" style="-webkit-mask-image:url(img/logos/norm/zoom-wordmark.svg);mask-image:url(img/logos/norm/zoom-wordmark.svg);--ar:4.123;--lh:26px"></li>
+      <li class="lg lg--txt"><i class="lg__mark" style="-webkit-mask-image:url(img/logos/norm/googlecalendar-mark.svg);mask-image:url(img/logos/norm/googlecalendar-mark.svg);--ar:1.000"></i>Google Calendar</li>
+      <li class="lg" role="img" aria-label="Xero" style="-webkit-mask-image:url(img/logos/norm/xero-mark.svg);mask-image:url(img/logos/norm/xero-mark.svg);--ar:1.000;--lh:34px"></li>
+      <li class="lg" role="img" aria-label="Sage" style="-webkit-mask-image:url(img/logos/norm/sage-wordmark.svg);mask-image:url(img/logos/norm/sage-wordmark.svg);--ar:1.751;--lh:34px"></li>
+      <li class="lg" role="img" aria-label="QuickBooks" style="-webkit-mask-image:url(img/logos/norm/quickbooks-wordmark.svg);mask-image:url(img/logos/norm/quickbooks-wordmark.svg);--ar:3.697;--lh:28px"></li>
+      <li class="lg" role="img" aria-label="Dropbox" style="-webkit-mask-image:url(img/logos/norm/dropbox-wordmark.svg);mask-image:url(img/logos/norm/dropbox-wordmark.svg);--ar:4.703;--lh:25px"></li>
+      <li class="lg lg--txt"><i class="lg__mark" style="-webkit-mask-image:url(img/logos/norm/acrobat-mark.svg);mask-image:url(img/logos/norm/acrobat-mark.svg);--ar:1.024"></i>Adobe Acrobat</li>
+      <li class="lg" role="img" aria-label="DocuSign" style="-webkit-mask-image:url(img/logos/norm/docusign-wordmark.svg);mask-image:url(img/logos/norm/docusign-wordmark.svg);--ar:4.612;--lh:25px"></li>
+      <li class="lg" role="img" aria-label="Mailchimp" style="-webkit-mask-image:url(img/logos/norm/mailchimp-wordmark.svg);mask-image:url(img/logos/norm/mailchimp-wordmark.svg);--ar:3.558;--lh:28px"></li>
+      <li class="lg" role="img" aria-label="Canva" style="-webkit-mask-image:url(img/logos/norm/canva-wordmark.svg);mask-image:url(img/logos/norm/canva-wordmark.svg);--ar:2.994;--lh:31px"></li>
+      <li class="lg" role="img" aria-label="Calendly" style="-webkit-mask-image:url(img/logos/norm/calendly-wordmark.svg);mask-image:url(img/logos/norm/calendly-wordmark.svg);--ar:3.952;--lh:27px"></li>
+      <li class="lg lg--txt"><i class="lg__mark" style="-webkit-mask-image:url(img/logos/norm/linkedin-mark.svg);mask-image:url(img/logos/norm/linkedin-mark.svg);--ar:1.000"></i>LinkedIn</li>
+      <li class="lg" role="img" aria-label="PayPal" style="-webkit-mask-image:url(img/logos/norm/paypal-wordmark.svg);mask-image:url(img/logos/norm/paypal-wordmark.svg);--ar:2.869;--lh:31px"></li>
+      <li class="lg" role="img" aria-label="Slack" style="-webkit-mask-image:url(img/logos/norm/slack-wordmark.svg);mask-image:url(img/logos/norm/slack-wordmark.svg);--ar:3.736;--lh:28px"></li>
+      <li class="lg lg--txt"><i class="lg__mark" style="-webkit-mask-image:url(img/logos/norm/notion-mono-mark.svg);mask-image:url(img/logos/norm/notion-mono-mark.svg);--ar:0.960"></i>Notion</li>
+      <li class="lg lg--txt"><i class="lg__mark" style="-webkit-mask-image:url(img/logos/norm/outlook-mark.svg);mask-image:url(img/logos/norm/outlook-mark.svg);--ar:1.140"></i>Outlook</li>
+      <li class="lg lg--txt"><i class="lg__mark" style="-webkit-mask-image:url(img/logos/norm/gmail-mark.svg);mask-image:url(img/logos/norm/gmail-mark.svg);--ar:1.324"></i>Gmail</li>
+      <li class="lg lg--txt"><i class="lg__mark" style="-webkit-mask-image:url(img/logos/norm/excel-mark.svg);mask-image:url(img/logos/norm/excel-mark.svg);--ar:1.140"></i>Excel</li>
+      <li class="lg lg--txt"><i class="lg__mark" style="-webkit-mask-image:url(img/logos/norm/googlesheets-mark.svg);mask-image:url(img/logos/norm/googlesheets-mark.svg);--ar:0.733"></i>Google Sheets</li>
+      <li class="lg lg--txt"><i class="lg__mark" style="-webkit-mask-image:url(img/logos/norm/word-mark.svg);mask-image:url(img/logos/norm/word-mark.svg);--ar:1.140"></i>Word</li>
+      <li class="lg lg--txt"><i class="lg__mark" style="-webkit-mask-image:url(img/logos/norm/googledocs-mark.svg);mask-image:url(img/logos/norm/googledocs-mark.svg);--ar:0.733"></i>Google Docs</li>
+      <li class="lg lg--txt"><i class="lg__mark" style="-webkit-mask-image:url(img/logos/norm/teams-mark.svg);mask-image:url(img/logos/norm/teams-mark.svg);--ar:1.077"></i>Teams</li>
+      <li class="lg lg--txt"><i class="lg__mark" style="-webkit-mask-image:url(img/logos/norm/googlemeet-mark.svg);mask-image:url(img/logos/norm/googlemeet-mark.svg);--ar:1.209"></i>Google Meet</li>
+      <li class="lg lg--txt"><i class="lg__mark" style="-webkit-mask-image:url(img/logos/norm/onedrive-mark.svg);mask-image:url(img/logos/norm/onedrive-mark.svg);--ar:1.544"></i>OneDrive</li>
+      <li class="lg lg--txt"><i class="lg__mark" style="-webkit-mask-image:url(img/logos/norm/googledrive-mark.svg);mask-image:url(img/logos/norm/googledrive-mark.svg);--ar:1.138"></i>Google Drive</li>
+      <li class="lg" role="img" aria-label="WhatsApp" style="-webkit-mask-image:url(img/logos/norm/whatsapp-wordmark.svg);mask-image:url(img/logos/norm/whatsapp-wordmark.svg);--ar:4.037;--lh:27px"></li>
+      <li class="lg" role="img" aria-label="Zoom" style="-webkit-mask-image:url(img/logos/norm/zoom-wordmark.svg);mask-image:url(img/logos/norm/zoom-wordmark.svg);--ar:4.123;--lh:26px"></li>
+      <li class="lg lg--txt"><i class="lg__mark" style="-webkit-mask-image:url(img/logos/norm/googlecalendar-mark.svg);mask-image:url(img/logos/norm/googlecalendar-mark.svg);--ar:1.000"></i>Google Calendar</li>
+      <li class="lg" role="img" aria-label="Xero" style="-webkit-mask-image:url(img/logos/norm/xero-mark.svg);mask-image:url(img/logos/norm/xero-mark.svg);--ar:1.000;--lh:34px"></li>
+      <li class="lg" role="img" aria-label="Sage" style="-webkit-mask-image:url(img/logos/norm/sage-wordmark.svg);mask-image:url(img/logos/norm/sage-wordmark.svg);--ar:1.751;--lh:34px"></li>
+      <li class="lg" role="img" aria-label="QuickBooks" style="-webkit-mask-image:url(img/logos/norm/quickbooks-wordmark.svg);mask-image:url(img/logos/norm/quickbooks-wordmark.svg);--ar:3.697;--lh:28px"></li>
+      <li class="lg" role="img" aria-label="Dropbox" style="-webkit-mask-image:url(img/logos/norm/dropbox-wordmark.svg);mask-image:url(img/logos/norm/dropbox-wordmark.svg);--ar:4.703;--lh:25px"></li>
+      <li class="lg lg--txt"><i class="lg__mark" style="-webkit-mask-image:url(img/logos/norm/acrobat-mark.svg);mask-image:url(img/logos/norm/acrobat-mark.svg);--ar:1.024"></i>Adobe Acrobat</li>
+      <li class="lg" role="img" aria-label="DocuSign" style="-webkit-mask-image:url(img/logos/norm/docusign-wordmark.svg);mask-image:url(img/logos/norm/docusign-wordmark.svg);--ar:4.612;--lh:25px"></li>
+      <li class="lg" role="img" aria-label="Mailchimp" style="-webkit-mask-image:url(img/logos/norm/mailchimp-wordmark.svg);mask-image:url(img/logos/norm/mailchimp-wordmark.svg);--ar:3.558;--lh:28px"></li>
+      <li class="lg" role="img" aria-label="Canva" style="-webkit-mask-image:url(img/logos/norm/canva-wordmark.svg);mask-image:url(img/logos/norm/canva-wordmark.svg);--ar:2.994;--lh:31px"></li>
+      <li class="lg" role="img" aria-label="Calendly" style="-webkit-mask-image:url(img/logos/norm/calendly-wordmark.svg);mask-image:url(img/logos/norm/calendly-wordmark.svg);--ar:3.952;--lh:27px"></li>
+      <li class="lg lg--txt"><i class="lg__mark" style="-webkit-mask-image:url(img/logos/norm/linkedin-mark.svg);mask-image:url(img/logos/norm/linkedin-mark.svg);--ar:1.000"></i>LinkedIn</li>
+      <li class="lg" role="img" aria-label="PayPal" style="-webkit-mask-image:url(img/logos/norm/paypal-wordmark.svg);mask-image:url(img/logos/norm/paypal-wordmark.svg);--ar:2.869;--lh:31px"></li>
+      <li class="lg" role="img" aria-label="Slack" style="-webkit-mask-image:url(img/logos/norm/slack-wordmark.svg);mask-image:url(img/logos/norm/slack-wordmark.svg);--ar:3.736;--lh:28px"></li>
+      <li class="lg lg--txt"><i class="lg__mark" style="-webkit-mask-image:url(img/logos/norm/notion-mono-mark.svg);mask-image:url(img/logos/norm/notion-mono-mark.svg);--ar:0.960"></i>Notion</li>
+    </ul>
   </div>
-</div>
+</section>
 
-<!-- ══ 01 Problem ══════════════════════════════════════════════════════ -->
-<section class="section" id="problem">
+<section class="section section--alt" id="results">
   <div class="wrap">
-    <div class="section-head rv">
-      <p class="eyebrow"><b>01</b> The problem</p>
-      <h2>Most of the work is the same work, every week.</h2>
-      <p class="lede">A huge amount of what your team does by hand can be done faster, or automated completely. That means lower costs, fewer mistakes, and more time to win new business.</p>
+    <div class="section-head">
+      <p class="eyebrow">Case study</p>
+      <h2>One job we automated.</h2>
     </div>
-
     <figure class="figure rv" style="margin:0">
       <div class="figure__bar">
         <span class="figure__ttl">Keeping a 6,000-name solicitor list current</span>
@@ -130,303 +142,79 @@
       <div class="figure__body">
         <div id="dg-ba" role="img" aria-label="Diagram comparing checking 6,000 records by hand against an automation that flags only what changed."></div>
       </div>
-      <figcaption class="figure__cap">A real job we automated for a barristers' chambers in London. Two clerks used to spend about a month a year trawling firm websites one by one. Now the change is flagged in seconds and the team just checks it.</figcaption>
+      <figcaption class="figure__cap">A real job we automated for a barristers' chambers. Two clerks used to spend about a month a year trawling firm websites one by one. Now the change is flagged in seconds and the team just checks it.</figcaption>
     </figure>
   </div>
 </section>
 
-<!-- ══ 02 What we do ═══════════════════════════════════════════════════ -->
-<section class="section section--alt" id="what">
+<section class="section clients" id="clients">
   <div class="wrap">
-    <div class="section-head rv">
-      <p class="eyebrow"><b>02</b> What we do</p>
-      <h2>One visit. Three things that stay.</h2>
-      <p class="lede">We come in and audit how you actually work. Then we build in three areas — the parts of a firm that decide whether AI pays off or gathers dust.</p>
+    <div class="section-head">
+      <p class="eyebrow">What clients say</p>
     </div>
-
-    <div class="fanwrap rv">
-      <div class="auditnode" id="auditNode">
-        <span class="k">The way in</span>
-        <h3>Audit</h3>
-        <p>Half a day on-site. We watch where the time goes and score all three.</p>
-      </div>
-      <div class="fan" id="dg-fan" aria-hidden="true"></div>
-    </div>
-
-    <div class="grid grid-3 rv" id="pillarGrid">
-      <article class="cell">
-        <p class="cell__n">Pillar 01</p>
-        <h3>Training</h3>
-        <p>Get your team using AI day to day, with the best tools for your industry, used safely with your data.</p>
-        <ul>
-          <li>The habit: ask "can AI do this?" before any admin job</li>
-          <li>Talks and hands-on sessions for the whole team</li>
-          <li>Live demos — your people pick what fits</li>
-        </ul>
-        <p class="tag">People</p>
-      </article>
-      <article class="cell">
-        <p class="cell__n">Pillar 02</p>
-        <h3>Automation</h3>
-        <p>Take the repetitive jobs off their plate: email, data entry, chasing, reports.</p>
-        <ul>
-          <li>Inbox triage and drafted replies</li>
-          <li>Keeping records and lists current</li>
-          <li>Anything done the same way every week</li>
-        </ul>
-        <p class="tag">Work</p>
-      </article>
-      <article class="cell">
-        <p class="cell__n">Pillar 03</p>
-        <h3>Infrastructure</h3>
-        <p>Set up your files and knowledge so AI can actually use them. This is the one most firms miss.</p>
-        <ul>
-          <li>Files organised where the AI can find them</li>
-          <li>How your firm works, written down for the AI to read</li>
-          <li>A searchable store of past work</li>
-        </ul>
-        <p class="tag">Context</p>
-      </article>
+    <!-- PLACEHOLDER quotes: swap for real ones before deploy. Attribution = type of firm, not a person -->
+    <div class="carousel" data-carousel>
+      <button class="carousel__btn" data-dir="-1" aria-label="Previous">‹</button>
+      <ul class="carousel__track">
+        <li class="quote"><blockquote>I thought it would be complicated. It wasn't. By the afternoon the team were using it on real files.</blockquote><p class="quote__who"><b>Dave</b><span>Accountant</span></p></li>
+        <li class="quote"><blockquote>The list that took two clerks a month now takes seconds. We just check it.</blockquote><p class="quote__who"><b>Priya</b><span>Barristers' clerk</span></p></li>
+        <li class="quote"><blockquote>Nobody had shown us how to use it on our own work before.</blockquote><p class="quote__who"><b>Tom</b><span>Solicitor</span></p></li>
+        <li class="quote"><blockquote>Reception stopped re-typing forms. That was the whole win.</blockquote><p class="quote__who"><b>Sarah</b><span>Practice manager, dental</span></p></li>
+        <li class="quote"><blockquote>Friday-night enquiries get answered on Friday night.</blockquote><p class="quote__who"><b>James</b><span>Estate agent</span></p></li>
+        <li class="quote"><blockquote>One job off my plate a week. Worth the day.</blockquote><p class="quote__who"><b>Mark</b><span>Builder</span></p></li>
+      </ul>
+      <button class="carousel__btn" data-dir="1" aria-label="Next">›</button>
     </div>
   </div>
 </section>
 
-<!-- ══ 03 How it works ═════════════════════════════════════════════════ -->
-<section class="section" id="how">
+<section class="section section--alt" id="faq">
   <div class="wrap">
-    <div class="section-head rv">
-      <p class="eyebrow"><b>03</b> How it works</p>
-      <h2>Four steps. The fourth is optional.</h2>
-      <p class="lede">All it takes to get started is a short call and a half day on-site. You'd be surprised how much gets done.</p>
-    </div>
-
-    <div class="steps rv">
-      <div class="step">
-        <p class="step__n">01</p>
-        <h3>Chat</h3>
-        <p>A short call to learn how you work and where the time goes. So we arrive already knowing.</p>
-        <p class="step__meta">Free · 20 minutes</p>
-      </div>
-      <div class="step">
-        <p class="step__n">02</p>
-        <h3>Audit</h3>
-        <p>Half a day on-site. We set up your tools, train your people, and get a real automation running.</p>
-        <p class="step__meta">On-site · half a day</p>
-      </div>
-      <div class="step">
-        <p class="step__n">03</p>
-        <h3>Report</h3>
-        <p>Written findings, scored across the three areas, and a clear plan for what to do next.</p>
-        <p class="step__meta">Yours to keep</p>
-      </div>
-      <div class="step">
-        <p class="step__n">04</p>
-        <h3>Ongoing</h3>
-        <p>We keep building, or you run with it. Either is a good outcome as far as we're concerned.</p>
-        <p class="step__meta">Optional</p>
-      </div>
-    </div>
-
-    <p class="lede rv" style="margin-top:clamp(2rem,4vw,3rem);max-width:48ch">You leave set up for AI whether or not we ever do another day's work for you.</p>
-  </div>
-</section>
-
-<!-- ══ 04 Results ══════════════════════════════════════════════════════ -->
-<section class="section section--alt" id="results">
-  <div class="wrap">
-    <div class="section-head rv">
-      <p class="eyebrow"><b>04</b> Results</p>
-      <h2>Real work, already gone.</h2>
-      <p class="lede">Two jobs we've taken off people's plates at a London chambers. Both of them started as a throwaway complaint in a first conversation.</p>
-    </div>
-
-    <div class="stories rv">
-      <article class="story">
-        <p class="story__stat">≈ 1 month<small>of clerks' time, back every year</small></p>
-        <h3>The list that was never up to date</h3>
-        <p>Keith's clerking team kept a 6,000-name solicitor list current by trawling firm websites one at a time — about a month of work a year between two people. We set up an automation that flags what's changed in seconds. They check it and move on.</p>
-        <p class="story__who">Barristers' chambers · London</p>
-      </article>
-      <article class="story">
-        <p class="story__stat">No more<small>copy, paste, re-format, repeat</small></p>
-        <h3>AI that works inside the document</h3>
-        <p>Jeremy, a barrister, used to copy and paste between Word and ChatGPT every time he wanted help with a draft. Slow and fiddly. Now an AI agent works directly in his documents: he talks, it edits in place, and the back and forth is gone.</p>
-        <p class="story__who">Barristers' chambers · London</p>
-      </article>
-    </div>
-
-    <!-- ┌─────────────────────────────────────────────────────────────────┐
-         │ TESTIMONIAL SLOT — deliberately empty.                          │
-         │ services.md lists "testimonial quote from chambers after their  │
-         │ audit" as still to develop. Drop the real quote in here when we │
-         │ have it; do not invent one. Suggested markup:                   │
-         │                                                                 │
-         │ <blockquote class="pull rv">“…”                                 │
-         │   <cite>Name, Role — Firm</cite></blockquote>                    │
-         └─────────────────────────────────────────────────────────────────┘ -->
-  </div>
-</section>
-
-<!-- ══ 05 Who it's for ═════════════════════════════════════════════════ -->
-<section class="section" id="who">
-  <div class="wrap">
-    <div class="section-head rv">
-      <p class="eyebrow"><b>05</b> Who it's for</p>
-      <h2>Firms like yours.</h2>
-      <p class="lede">Medium-sized London firms, owner or partner-run, with a lot of admin. Most people we meet have tried ChatGPT once and left it there. That's the normal starting point, not a problem.</p>
-    </div>
-
-    <div class="sectors rv">
-      <article class="sector">
-        <h3>Barristers' chambers &amp; law</h3>
-        <p>Keeping solicitor lists current, fee admin, drafting.</p>
-        <p class="fix"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9m-3.5-4L13 8l-4.5 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> CRM updates, document drafting, meeting notes</p>
-      </article>
-      <article class="sector">
-        <h3>Accountancy &amp; bookkeeping</h3>
-        <p>Data entry, chasing clients for records, deadline crunch.</p>
-        <p class="fix"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9m-3.5-4L13 8l-4.5 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Document extraction, reminders, chasers</p>
-      </article>
-      <article class="sector">
-        <h3>Insurance brokers</h3>
-        <p>Renewal admin, re-keying the same data, compliance forms.</p>
-        <p class="fix"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9m-3.5-4L13 8l-4.5 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Quote prep, renewal chase, document parsing</p>
-      </article>
-      <article class="sector">
-        <h3>Estate &amp; lettings agents</h3>
-        <p>Out-of-hours leads going cold, listing write-ups, viewings.</p>
-        <p class="fix"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9m-3.5-4L13 8l-4.5 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Instant lead replies, listing drafts, scheduling</p>
-      </article>
-      <article class="sector">
-        <h3>Property &amp; block management</h3>
-        <p>Endless leaseholder email, maintenance triage, service charges.</p>
-        <p class="fix"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9m-3.5-4L13 8l-4.5 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Inbox triage, routine query replies</p>
-      </article>
-      <article class="sector">
-        <h3>Construction &amp; M&amp;E</h3>
-        <p>Quoting, RAMS and compliance docs, chasing invoices.</p>
-        <p class="fix"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9m-3.5-4L13 8l-4.5 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Faster quotes and compliance docs, invoice chasers</p>
-      </article>
-    </div>
-
-    <p class="lede rv" style="margin-top:2rem;max-width:52ch">Not on the list? The time-sinks are much the same everywhere. <a class="link" data-cta href="#book">Ask us</a>.</p>
-  </div>
-</section>
-
-<!-- ══ 06 Data safety ══════════════════════════════════════════════════ -->
-<section class="section section--alt" id="safety">
-  <div class="wrap">
-    <div class="section-head rv">
-      <p class="eyebrow"><b>06</b> Your data</p>
-      <h2>Your client data stays yours.</h2>
-      <p class="lede">This is the real reason most firms stop before they start, and it deserves a straight answer rather than a reassuring noise.</p>
-    </div>
-
-    <div class="grid grid-2 rv" style="margin-bottom:clamp(2rem,4vw,3rem)">
-      <article class="cell">
-        <p class="cell__n">The catch</p>
-        <h3>Free tools can learn from what you upload</h3>
-        <p>That's a genuine problem when the file is a client's accounts, a case bundle or a tenancy agreement. If someone in your firm has been told "don't put anything real into ChatGPT", they were right to be careful.</p>
-      </article>
-      <article class="cell">
-        <p class="cell__n">The fix</p>
-        <h3>Paid and enterprise tiers don't</h3>
-        <p>Training switched off, a data processing agreement in place, your work kept out of the training set. Setting that up properly is part of the audit — and it's what unlocks AI for the work you thought was off-limits.</p>
-      </article>
-    </div>
-
-    <div class="faq rv">
-      <details>
-        <summary>Do we need anyone technical on our side?</summary>
-        <div class="ans"><p>No. That's the whole point. We work with firms whose idea of IT is the person who knows how to fix the printer. Everything we set up is meant to be used by the people already doing the job.</p></div>
-      </details>
-      <details>
-        <summary>Is our team going to have to learn a lot?</summary>
-        <div class="ans"><p>Less than you'd think. These tools are powerful enough that a little training goes a long way — that's why half a day gets so much done. The single biggest win is a habit, not a skill: before any admin job, ask "can AI do this?"</p></div>
-      </details>
-      <details>
-        <summary>What if we already use Microsoft Copilot?</summary>
-        <div class="ans"><p>Copilot sits nicely inside Outlook and Excel, but it's behind the best models available today. We'd generally point you at Claude or ChatGPT for the heavy lifting for now, and revisit as it improves. We'll tell you straight either way.</p></div>
-      </details>
-      <details>
-        <summary>What does it cost?</summary>
-        <div class="ans"><p>The audit is a fixed price, discounted for early clients, and we'll tell you the number on the first call before you commit to anything. Ongoing work is quoted separately and only if you want it. We'd rather talk about where your time goes first.</p></div>
-      </details>
-      <details>
-        <summary>What if there's nothing worth automating?</summary>
-        <div class="ans"><p>Then we'll say so, and you'll still leave the audit with your tools set up, your team trained and a written plan. In practice we've not yet walked into a firm with no repetitive work in it.</p></div>
-      </details>
+    <div class="section-head"><h2>FAQ</h2></div>
+    <!-- answers adapted from klarifai, weframe, aiagencyplus, metrix, fixology (swipe §7); claims offer.md, services.md -->
+    <div class="faq">
+      <details><summary>How long does it take?</summary><div class="ans"><p>A short call, then half a day on site. Your team is trained and one automation is running by the time we leave. A written report follows.</p></div></details>
+      <details><summary>How much does it cost?</summary><div class="ans"><p>The audit is a fixed price, lower for early clients. We give you the number on the first call, before you commit to anything.</p></div></details>
+      <details><summary>Can you work with my existing tools?</summary><div class="ans"><p>Yes. We work inside what you already run. Outlook, Xero, Word, the CRM. Nothing switches over until you've seen it work.</p></div></details>
+      <details><summary>Do I need any technical knowledge?</summary><div class="ans"><p>No. That's the whole point. We do the technical work in your office, on your own jobs. Your team uses it the way they use email.</p></div></details>
+      <details><summary>Is the data secure?</summary><div class="ans"><p>We tell you which tool sees which files and whether it trains on them before anything runs. On the tiers we set up, it doesn't. Nothing goes out without a person checking it first.</p></div></details>
+      <details><summary>We've already tried AI and it didn't work. Why would this be any different?</summary><div class="ans"><p>Usually it was the free version, on its own, with nobody shown how to use it on real work. We set up the paid tools with your data kept safe, train the whole team on their own jobs, and leave one automation running.</p></div></details>
     </div>
   </div>
 </section>
 
-<!-- ══ Founder ═════════════════════════════════════════════════════════ -->
-<section class="section" id="about">
-  <div class="wrap">
-    <div class="founder rv">
-      <!-- Swap the placeholder for a real photo:
-           <img src="img/nathan.jpg" alt="Nathan Sharp" width="420" height="525"> -->
-      <div class="portrait">
-        <span class="mono" aria-hidden="true">NS</span>
-        <span class="ph">Photo to come</span>
-      </div>
-      <div>
-        <p class="eyebrow"><b>07</b> Who you'll be dealing with</p>
-        <blockquote>“We're a small team who work with AI every day. We've seen what the best companies are doing, and we bring that to firms who haven't started yet.”</blockquote>
-        <p class="sig">
-          <b>Nathan Sharp</b>
-          Founder, The Automation Practice · London
-        </p>
-        <div class="cta-row" style="margin-top:1.75rem">
-          <a class="btn btn--ghost" data-cta href="#book">Book a call <span class="arr" aria-hidden="true">→</span></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ Book ════════════════════════════════════════════════════════════ -->
-<section class="section section--alt book" id="book">
+<section class="section book" id="chat">
   <div class="wrap book__in">
-    <p class="eyebrow" style="justify-content:center"><b>08</b> Let's chat</p>
     <h2>Let's chat about your tools.</h2>
-    <p class="lede">Tell us where the time goes, and we'll tell you what we'd automate first. It's free advice from people who do this every day, so why not take it.</p>
+    <p class="lede">Tell us where the time goes, and we'll tell you what to automate first. It's free advice from people who do this every day.</p>
     <div class="cta-row" style="justify-content:center">
-      <a class="btn" data-cta data-cta-primary href="tel:+447938890049">Book a call <span class="arr" aria-hidden="true">→</span></a>
+      <a class="btn" data-cta data-cta-primary href="#chat">Book a free strategy call <span class="arr" aria-hidden="true">→</span></a>
     </div>
-
-    <!-- SCHEDULER SLOT — when a Cal.com / Calendly link exists, set
-         BOOKING_URL in js/site.js and every "Book a call" button re-points
-         at it automatically. Until then they fall through to the phone. -->
-
     <div class="book__ways">
-      <div class="way">
-        <span class="k">Phone</span>
-        <a href="tel:+447938890049">+44 7938 890049</a>
-      </div>
-      <div class="way">
-        <span class="k">Email</span>
-        <a href="mailto:nathan@theautomationpractice.com">nathan@theautomationpractice.com</a>
-      </div>
-      <div class="way">
-        <span class="k">Where</span>
-        <span style="color:var(--ink-2)">London &amp; the South East</span>
-      </div>
+      <div class="way"><span class="k">Phone</span><a href="tel:+447938890049">+44 7938 890049</a></div>
+      <div class="way"><span class="k">Email</span><a href="mailto:info@theautomationpractice.com">info@theautomationpractice.com</a></div>
     </div>
   </div>
 </section>
-</main>
 
-<footer class="ftr">
+<footer class="ftr ftr--full">
+  <div class="wrap ftr__grid">
+    <div class="ftr__brand">
+      <a class="brand" href="index.html" aria-label="The Automation Practice, home"><svg class="logo" aria-hidden="true"><use href="#tap-logo"/></svg></a>
+      <p>We build AI into the tools you already use.</p>
+    </div>
+    <div class="ftr__col"><span class="k">Pages</span><a href="index.html">Home</a><a href="about.html">About</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a></div>
+    <div class="ftr__col"><span class="k">Contact</span><a href="mailto:info@theautomationpractice.com">info@theautomationpractice.com</a><a href="tel:+447938890049">+44 7938 890049</a><a data-cta href="#chat">Book a strategy call</a></div>
+  </div>
   <div class="wrap ftr__in">
     <span>© <span id="yr">2026</span> The Automation Practice</span>
-    <a href="tel:+447938890049">+44 7938 890049</a>
-    <a href="mailto:nathan@theautomationpractice.com">nathan@theautomationpractice.com</a>
-    <span class="sp"><button id="themeBtn" class="tel" style="border:0;background:none;cursor:pointer;padding:0" aria-label="Switch colour theme">Theme</button></span>
   </div>
 </footer>
-
+</main>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="tap-logo" viewBox="0 -12 22000 1424" overflow="visible"><rect x="46" y="46" width="1319" height="1319" rx="193" fill="none" stroke="currentColor" stroke-width="93"/><path d="M436 911 655 501l205 411M539 796h231M976 501v411" fill="none" stroke="currentColor" stroke-width="93" stroke-linecap="round" stroke-linejoin="round"/><path fill="var(--lg-a, currentColor)" d="M2729 129H2891V1322L3049 1373V1412H2570V1373L2729 1322ZM3328 161H2291L2384 142L2246 433L2201 424L2242 0H2260L2401 85L2314 69H3305L3218 85L3360 0H3378L3418 424L3373 433L3236 142Z M4042 1375 4196 1328V849Q4196 794 4173 755Q4150 715 4105 693Q4060 672 3995 672Q3916 672 3848 701Q3780 730 3754 771L3716 739Q3770 682 3817 642Q3865 603 3911 579Q3956 555 4004 544Q4052 534 4104 534Q4226 534 4285 611Q4344 689 4344 857V1328L4497 1375V1412H4042ZM3919 1412H3465V1375L3617 1328V190Q3604 175 3583 159Q3562 143 3532 127Q3501 110 3462 94V74L3754 -9H3774L3764 168V1328L3919 1375Z M4967 534Q5064 534 5136 577Q5207 620 5249 702Q5292 785 5302 904H4688L4690 837L5205 814L5137 856Q5130 783 5108 728Q5087 673 5049 642Q5010 612 4951 612Q4881 612 4828 650Q4775 689 4745 764Q4716 838 4716 946Q4716 1059 4759 1141Q4803 1223 4881 1267Q4959 1311 5063 1311Q5102 1311 5139 1301Q5176 1291 5213 1270Q5249 1250 5283 1220L5308 1247Q5257 1310 5205 1351Q5152 1393 5094 1412Q5036 1432 4968 1432Q4852 1432 4761 1375Q4670 1319 4617 1220Q4565 1122 4565 995Q4565 868 4613 763Q4662 659 4752 596Q4842 534 4967 534Z M6051 909V819H6713V909ZM6946 1320 7094 1373V1412H6601V1373L6775 1322L6311 217H6377L5943 1322L6107 1373V1412H5686V1373L5839 1321L6359 49H6406Z M7342 1129Q7342 1190 7359 1226Q7376 1262 7417 1277Q7458 1293 7529 1293Q7597 1293 7661 1267Q7725 1241 7750 1202L7788 1239Q7737 1293 7693 1330Q7649 1367 7607 1390Q7566 1412 7523 1422Q7480 1432 7431 1432Q7310 1432 7252 1355Q7195 1279 7195 1125V651L7052 592V553L7351 539L7342 649ZM7751 1428 7736 1246V651L7593 592V553L7895 539L7885 649V1273Q7894 1283 7909 1293Q7924 1302 7942 1311Q7960 1320 7979 1326Q7997 1332 8013 1335V1364L7770 1428Z M8338 1171Q8338 1238 8378 1272Q8419 1306 8494 1306Q8529 1306 8571 1299Q8612 1292 8661 1277V1324Q8601 1365 8557 1388Q8513 1411 8478 1420Q8443 1428 8408 1428Q8343 1428 8294 1404Q8245 1379 8217 1330Q8190 1281 8190 1210V688L8082 613V595Q8103 580 8125 563Q8146 547 8168 530Q8190 513 8213 495Q8235 478 8259 459Q8283 441 8307 422H8338V584ZM8280 646V554H8632L8616 646Z M9148 1356Q9224 1356 9283 1319Q9342 1282 9376 1204Q9410 1126 9410 1006Q9410 877 9377 788Q9343 700 9283 655Q9223 609 9142 609Q9066 609 9007 647Q8947 684 8913 761Q8879 839 8879 960Q8879 1088 8913 1177Q8946 1265 9007 1311Q9068 1356 9148 1356ZM9142 1432Q9016 1432 8919 1376Q8822 1320 8767 1221Q8713 1121 8713 992Q8713 860 8770 756Q8827 652 8925 593Q9023 534 9147 534Q9275 534 9371 590Q9468 646 9522 744Q9577 843 9577 973Q9577 1106 9520 1210Q9463 1313 9365 1373Q9267 1432 9142 1432Z M9977 717V1328L10122 1375V1412H9678V1375L9830 1328V731Q9814 715 9782 698Q9750 682 9682 660V635L9928 533H9948ZM10516 774V1328L10660 1375V1412H10223V1375L10368 1328V835Q10368 780 10345 744Q10321 708 10280 690Q10238 672 10184 672Q10115 672 10052 698Q9988 723 9963 763L9927 726Q9978 673 10023 636Q10067 599 10110 577Q10153 554 10197 544Q10241 534 10291 534Q10373 534 10422 569Q10471 603 10493 658Q10516 713 10516 774ZM11054 831V1328L11208 1375V1412H10762V1375L10907 1328V835Q10907 779 10883 744Q10860 708 10818 690Q10777 672 10722 672Q10654 672 10590 698Q10527 723 10502 763L10466 726Q10517 673 10561 636Q10606 599 10649 577Q10692 554 10736 544Q10780 534 10830 534Q10950 534 11002 611Q11054 688 11054 831Z M11807 864 11823 933Q11704 961 11628 989Q11553 1017 11511 1046Q11469 1076 11452 1109Q11436 1142 11436 1181Q11436 1250 11476 1286Q11517 1322 11576 1322Q11623 1322 11662 1298Q11701 1274 11725 1235Q11749 1196 11749 1150V787Q11749 714 11711 670Q11674 627 11588 627Q11557 627 11518 636Q11478 646 11442 665L11493 619Q11490 647 11484 676Q11479 704 11471 726Q11464 749 11452 761Q11437 778 11413 786Q11388 794 11364 794Q11333 794 11315 779Q11297 765 11297 743Q11297 711 11328 676Q11359 642 11410 611Q11460 580 11523 561Q11585 542 11649 542Q11737 542 11792 569Q11846 596 11871 648Q11896 699 11896 775V1237Q11896 1268 11905 1288Q11914 1309 11932 1319Q11949 1330 11975 1330Q11998 1330 12025 1320Q12052 1311 12077 1296V1341Q12035 1388 11989 1409Q11943 1430 11904 1430Q11855 1430 11821 1408Q11786 1387 11768 1346Q11750 1305 11750 1249L11756 1240Q11743 1296 11707 1339Q11672 1383 11622 1407Q11573 1432 11516 1432Q11415 1432 11350 1376Q11284 1319 11284 1213Q11284 1157 11306 1111Q11329 1065 11386 1024Q11444 983 11546 944Q11648 905 11807 864Z M12355 1171Q12355 1238 12395 1272Q12436 1306 12511 1306Q12546 1306 12588 1299Q12629 1292 12678 1277V1324Q12618 1365 12574 1388Q12530 1411 12495 1420Q12460 1428 12425 1428Q12360 1428 12311 1404Q12262 1379 12234 1330Q12207 1281 12207 1210V688L12099 613V595Q12120 580 12142 563Q12163 547 12185 530Q12207 513 12230 495Q12252 478 12276 459Q12300 441 12324 422H12355V584ZM12297 646V554H12649L12633 646Z M12936 230Q12883 230 12849 195Q12815 161 12815 110Q12815 60 12849 26Q12883 -9 12936 -9Q12989 -9 13023 26Q13056 60 13056 110Q13056 161 13023 195Q12989 230 12936 230ZM13026 533 13020 696V1328L13175 1375V1412H12721V1375L12873 1328V720Q12862 708 12838 693Q12815 679 12785 665Q12756 651 12725 641V611L13008 533Z M13690 1356Q13766 1356 13825 1319Q13884 1282 13918 1204Q13952 1126 13952 1006Q13952 877 13919 788Q13885 700 13825 655Q13765 609 13684 609Q13608 609 13549 647Q13489 684 13455 761Q13421 839 13421 960Q13421 1088 13455 1177Q13488 1265 13549 1311Q13610 1356 13690 1356ZM13684 1432Q13558 1432 13461 1376Q13364 1320 13309 1221Q13255 1121 13255 992Q13255 860 13312 756Q13369 652 13467 593Q13565 534 13689 534Q13817 534 13913 590Q14010 646 14064 744Q14119 843 14119 973Q14119 1106 14062 1210Q14005 1313 13907 1373Q13809 1432 13684 1432Z M14519 717V1328L14673 1375V1412H14220V1375L14372 1328V731Q14356 715 14324 698Q14292 682 14224 660V635L14470 533H14490ZM14797 1375 14951 1328V849Q14951 794 14928 755Q14905 715 14860 693Q14815 672 14749 672Q14670 672 14603 701Q14535 730 14508 771L14470 739Q14524 682 14572 642Q14620 603 14666 579Q14711 555 14759 544Q14806 534 14859 534Q14981 534 15040 611Q15099 689 15099 857V1328L15252 1375V1412H14797Z"/><path fill="var(--lg-b, currentColor)" d="M16629 447Q16629 356 16589 292Q16549 228 16458 195Q16367 161 16211 161H15922L15935 69H16301Q16480 69 16590 117Q16699 166 16750 249Q16800 332 16800 435Q16800 541 16748 630Q16696 720 16586 773Q16476 827 16301 827H15935L15922 734H16323Q16410 734 16479 701Q16548 669 16589 605Q16629 541 16629 447ZM16071 69V1322L16230 1373V1412H15750V1373L15909 1322V159L15750 107V69Z M17464 540Q17515 540 17538 564Q17561 589 17561 628Q17561 673 17532 701Q17502 728 17452 728Q17430 728 17408 720Q17385 712 17361 704Q17336 696 17307 696Q17284 696 17256 702Q17228 709 17201 721Q17174 734 17154 750L17133 715Q17193 669 17242 637Q17292 604 17333 583Q17373 561 17406 551Q17439 540 17464 540ZM17173 717V1328L17328 1375V1412H16874V1375L17026 1328V731Q17013 717 16992 706Q16972 695 16943 684Q16915 672 16878 660V635L17143 533H17163Z M18135 864 18151 933Q18032 961 17956 989Q17881 1017 17839 1046Q17797 1076 17780 1109Q17764 1142 17764 1181Q17764 1250 17804 1286Q17845 1322 17904 1322Q17951 1322 17990 1298Q18029 1274 18053 1235Q18077 1196 18077 1150V787Q18077 714 18039 670Q18002 627 17916 627Q17885 627 17846 636Q17806 646 17770 665L17821 619Q17818 647 17812 676Q17807 704 17799 726Q17792 749 17780 761Q17765 778 17741 786Q17716 794 17692 794Q17661 794 17643 779Q17625 765 17625 743Q17625 711 17656 676Q17687 642 17738 611Q17788 580 17851 561Q17913 542 17977 542Q18065 542 18120 569Q18174 596 18199 648Q18224 699 18224 775V1237Q18224 1268 18233 1288Q18242 1309 18260 1319Q18277 1330 18303 1330Q18326 1330 18353 1320Q18380 1311 18405 1296V1341Q18363 1388 18317 1409Q18271 1430 18232 1430Q18183 1430 18149 1408Q18114 1387 18096 1346Q18078 1305 18078 1249L18084 1240Q18071 1296 18035 1339Q18000 1383 17950 1407Q17901 1432 17844 1432Q17743 1432 17678 1376Q17612 1319 17612 1213Q17612 1157 17634 1111Q17657 1065 17714 1024Q17772 983 17874 944Q17976 905 18135 864Z M18922 534Q19004 534 19053 552Q19102 571 19124 598Q19146 625 19146 652Q19146 680 19134 701Q19123 722 19102 733Q19081 745 19054 745Q19025 745 19003 732Q18980 719 18960 701Q18940 682 18921 663Q18901 644 18877 631Q18854 618 18824 618Q18769 618 18717 651Q18665 684 18632 752Q18599 820 18599 923Q18599 1043 18639 1130Q18679 1217 18752 1264Q18825 1311 18925 1311Q18980 1311 19034 1288Q19087 1264 19136 1220L19160 1247Q19111 1310 19061 1351Q19011 1393 18954 1412Q18898 1432 18832 1432Q18720 1432 18633 1376Q18547 1321 18498 1225Q18449 1128 18449 1007Q18449 911 18480 825Q18512 740 18572 674Q18631 609 18720 571Q18808 534 18922 534Z M19491 1171Q19491 1238 19531 1272Q19572 1306 19647 1306Q19682 1306 19724 1299Q19765 1292 19814 1277V1324Q19754 1365 19710 1388Q19666 1411 19631 1420Q19596 1428 19561 1428Q19496 1428 19447 1404Q19398 1379 19370 1330Q19343 1281 19343 1210V688L19235 613V595Q19256 580 19278 563Q19299 547 19321 530Q19343 513 19366 495Q19388 478 19412 459Q19436 441 19460 422H19491V584ZM19433 646V554H19785L19769 646Z M20072 230Q20019 230 19985 195Q19951 161 19951 110Q19951 60 19985 26Q20019 -9 20072 -9Q20125 -9 20159 26Q20192 60 20192 110Q20192 161 20159 195Q20125 230 20072 230ZM20162 533 20156 696V1328L20311 1375V1412H19857V1375L20009 1328V720Q19998 708 19974 693Q19951 679 19921 665Q19892 651 19861 641V611L20144 533Z M20864 534Q20946 534 20995 552Q21044 571 21066 598Q21088 625 21088 652Q21088 680 21076 701Q21065 722 21044 733Q21023 745 20996 745Q20967 745 20945 732Q20922 719 20902 701Q20882 682 20863 663Q20843 644 20819 631Q20796 618 20766 618Q20711 618 20659 651Q20607 684 20574 752Q20541 820 20541 923Q20541 1043 20581 1130Q20621 1217 20694 1264Q20767 1311 20867 1311Q20922 1311 20976 1288Q21029 1264 21078 1220L21102 1247Q21053 1310 21003 1351Q20953 1393 20896 1412Q20840 1432 20774 1432Q20662 1432 20575 1376Q20489 1321 20440 1225Q20391 1128 20391 1007Q20391 911 20422 825Q20454 740 20514 674Q20573 609 20662 571Q20750 534 20864 534Z M21594 534Q21691 534 21763 577Q21834 620 21876 702Q21919 785 21929 904H21315L21317 837L21832 814L21764 856Q21757 783 21735 728Q21714 673 21676 642Q21637 612 21578 612Q21508 612 21455 650Q21402 689 21372 764Q21343 838 21343 946Q21343 1059 21386 1141Q21430 1223 21508 1267Q21586 1311 21690 1311Q21729 1311 21766 1301Q21803 1291 21840 1270Q21876 1250 21910 1220L21935 1247Q21884 1310 21832 1351Q21779 1393 21721 1412Q21663 1432 21595 1432Q21479 1432 21388 1375Q21297 1319 21244 1220Q21192 1122 21192 995Q21192 868 21240 763Q21289 659 21379 596Q21469 534 21594 534Z"/></symbol></svg>
 <script src="js/diagrams.js"></script>
 <script src="js/site.js"></script>
+<script src="js/lab.js"></script>
+<script src="js/orb.js"></script>
 </body>
 </html>
