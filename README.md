@@ -10,6 +10,7 @@ Built output of `lab/` (v2, 2026-09-27). **Don't edit here** — edit `lab/secti
 ```bash
 cp lab/{index,about,careers,contact}.html site/ && cp -r lab/{css,js,fonts} site/ && cp -r lab/img/logos site/img/
 sed -i '/name="robots" content="noindex"/d' site/*.html
+# re-add index.html SEO head (title | tagline, meta description, canonical) — lab lacks it
 scripts/deploy_site.sh   # splits site/ → public Pages repo; live in ~30s
 ```
 

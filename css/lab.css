@@ -144,3 +144,9 @@ h1 + .hero__sub { margin-top: 2rem; }
 @media (max-width: 940px) { .hero { min-height: 0; } body[data-hero="a"] .hero__in { grid-template-columns: 1fr; } .hero__art.orb { max-width: 440px; } }
 .marquee .lg__img { height: 22px; width: auto; aspect-ratio: var(--ar, 1); display: inline-block; filter: grayscale(1); opacity: .72; }
 :root[data-theme="dark"] .marquee .lg__img { opacity: .8; }
+
+/* Hero orb: wireframe in the text colour; canvas bleeds past its column (transparent) so the rings fit */
+.hero__art.orb { --orb: var(--ink); position: relative; aspect-ratio: 1; max-width: 640px; overflow: visible; }
+.hero__art.orb canvas { position: absolute; width: 150%; height: 150%; left: -25%; top: -25%; pointer-events: none; }
+.hero { overflow-x: clip; }
+
