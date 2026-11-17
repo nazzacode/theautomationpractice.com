@@ -278,8 +278,17 @@ p { text-wrap: pretty; }   /* no orphaned last words */
 @media (max-width: 520px) {
   .brand { font-size: 1rem; gap: .45rem; }
   .brand .mark { width: 19px; height: 19px; }
-  .hdr .btn { padding: .58em .9em; font-size: .82rem; }
+  .hdr .btn { padding: .58em .8em; font-size: .8rem; white-space: nowrap; }
   .hdr__in { gap: .75rem; min-height: 60px; }
+}
+@media (max-width: 440px) {
+  .brand { font-size: .94rem; }
+  .hdr .theme { display: none; }
+}
+@media (max-width: 380px) {
+  .brand { font-size: .86rem; gap: .35rem; }
+  .hdr .btn { font-size: .74rem; padding: .55em .65em; }
+  .hdr__in { gap: .5rem; }
 }
 
 /* ─── Hero ───────────────────────────────────────────────────────────── */
